@@ -1,49 +1,46 @@
-/* Reset default margins and padding */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Apply a minimum height to ensure body covers the full viewport */
 body {
-    background-color: #000000; /* The Vanta background will replace this color */
+    background-color: #000000;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    min-height: 100vh; /* Ensure body takes full height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
 
-/* Adjust the Vanta background container */
 #vanta-background {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative; /* Allows content to be layered on top */
-    z-index: 1; /* Ensure the content is visible above the Vanta effect */
+    position: relative; 
+    z-index: 1; 
 }
 
-/* Header styles */
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
-    z-index: 1; /* Make sure the header stays above the Vanta effect */
+    justify-content: center; 
+    z-index: 1;
 }
 
-/* Spacing between text and logo */
 .header-text {
     text-align: center;
-    margin-bottom: 1rem; /* Space between header text and image */
+    margin-bottom: 1rem; 
 }
 
 .header-text p {
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 h1 {
@@ -52,23 +49,25 @@ h1 {
     font-weight: 800;
     color: rgb(255, 255, 255);
     padding-top: 2rem;
-    font-size: clamp(2em, 6vw, 5em);
+    font-size: clamp(2rem, 6vw, 5rem);
 }
 
-/* Logo image styles */
 .mockup {
     height: 50%;
     max-height: 60vh;
-    margin: 2rem 0; /* Space above and below the image */
-    z-index: 1; /* Ensure the image stays above the background effect */
+    margin: 2rem 0;
+    z-index: 1;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* Button styles */
 .buttons {
     text-align: center;
-    display: block;
-    margin-top: 2rem; /* Space between the image and buttons */
-    z-index: 1; /* Ensure the buttons stay above the Vanta effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    z-index: 1;
 }
 
 .buttons a {
@@ -82,7 +81,6 @@ h1 {
     border: 1px solid white;
     transition: all 0.2s;
     margin-bottom: 0.5em;
-    display: inline-block;
     width: max-content;
 }
 
@@ -92,7 +90,7 @@ h1 {
 }
 
 .buttons a:not(:last-of-type) {
-    margin-right: 1em;
+    margin-right: 0;
 }
 
 .buttons a:hover {
@@ -105,13 +103,12 @@ h1 {
     font-family: 'Roboto', sans-serif;
     margin-top: 2em;
     text-align: center;
-    font-size: 1rem; /* Match the size of the "Custom Chatbot App for iOS and Android" text */
+    font-size: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    z-index: 1; /* Ensure the text stays above the Vanta effect */
+    z-index: 1;
 }
 
-/* Footer styles */
 footer {
     background-color: #0D0D0D;
     text-align: center;
@@ -119,11 +116,10 @@ footer {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    margin-top: auto; /* Push the footer to the bottom */
-    z-index: 1; /* Keep the footer on top of the Vanta effect */
+    margin-top: auto;
+    z-index: 1;
 }
 
-/* Ensure the Vanta background fills the viewport and stays behind the content */
 #vanta-background::before {
     content: "";
     position: absolute;
@@ -131,5 +127,5 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Ensure the background effect stays behind all other elements */
+    z-index: 0;
 }
