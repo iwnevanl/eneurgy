@@ -8,13 +8,13 @@ body {
     background-color: #000000;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 #vanta-background {
-    height: 100vh;
+    flex: 1; /* Ensures the main content expands to fill the available space */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +55,7 @@ h1 {
 }
 
 .mockup {
-    width: clamp(100px, 80%, 750px); /* Scalable image */
+    width: clamp(100px, 80%, 850px); /* Scalable image */
     height: auto; 
     margin: 2rem 0;
     z-index: 1;
@@ -114,8 +114,10 @@ footer {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    margin-top: auto;
     z-index: 1;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0; /* Ensures the footer does not shrink */
 }
 
 #vanta-background::before {
