@@ -20,8 +20,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
 }
 
 .header {
@@ -30,6 +31,7 @@ body {
     align-items: center;
     justify-content: center; 
     z-index: 1;
+    width: 100%;
 }
 
 .header-text {
@@ -48,49 +50,45 @@ h1 {
     font-style: italic;
     font-weight: 800;
     color: rgb(255, 255, 255);
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-size: clamp(2rem, 6vw, 5rem);
 }
 
 .mockup {
-    height: 50%;
-    max-height: 60vh;
+    width: clamp(150px, 40%, 400px); /* Scalable image */
+    height: auto; 
     margin: 2rem 0;
     z-index: 1;
-    max-width: 100%;
     object-fit: contain;
 }
 
 .buttons {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures buttons fit on smaller screens */
+    margin-top: 1rem;
     z-index: 1;
 }
 
 .buttons a {
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
     text-decoration: none;
     border-radius: 1em;
     letter-spacing: 1px;
     text-transform: uppercase;
     border: 1px solid white;
     transition: all 0.2s;
-    margin-bottom: 0.5em;
+    margin: 0.5rem;
     width: max-content;
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem); /* Responsive font size for buttons */
 }
 
 .buttons .primary {
     background-color: rgb(0, 0, 0);
     color: #f6f7fb;
-}
-
-.buttons a:not(:last-of-type) {
-    margin-right: 0;
 }
 
 .buttons a:hover {
@@ -101,9 +99,9 @@ h1 {
 
 .soon {
     font-family: 'Roboto', sans-serif;
-    margin-top: 2em;
+    margin-top: 1rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     letter-spacing: 1px;
     text-transform: uppercase;
     z-index: 1;
