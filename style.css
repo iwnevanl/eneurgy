@@ -55,7 +55,7 @@ h1 {
 }
 
 .mockup {
-    width: clamp(150px, 40%, 400px); /* Scalable image */
+    width: clamp(100px, 80%, 750px); /* Scalable image */
     height: auto; 
     margin: 2rem 0;
     z-index: 1;
